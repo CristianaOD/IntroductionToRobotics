@@ -49,10 +49,9 @@ void moveElevator(int targetFloor) {
     // aprind LED-ul corespunzător etajului curent
     digitalWrite(floorLEDPins[floor], HIGH);
     delay(500); // astept 0.5 secunde înainte de a trece la următorul etaj
+    elevatorMovingSound(); // reda sunetul când ascensorul este în mișcare, dar nu a ajuns încă la destinație
     
     for (int i = 0; i < 3; i++) {
-      elevatorMovingSound(); // reda sunetul când ascensorul este în mișcare, dar nu a ajuns încă la destinație
-      delay(200); 
       digitalWrite(elevatorLEDPin, HIGH); // palpâie al patrulea LED când ascensorul este în mișcare
       delay(100); 
       digitalWrite(elevatorLEDPin, LOW);
