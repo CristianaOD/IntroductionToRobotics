@@ -17,5 +17,5 @@ If the elevator is already at the desired floor, pressing the button for that fl
 ![A photo of my setup](https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Elevator%20simulator%20wannabe.jpeg?raw=true)
 [![A link to a video showcasing functionality ](https://youtu.be/JMy4mJVvdsM?t=5)](https://www.youtube.com/watch?v=JMy4mJVvdsM&ab_channel=Diana-CristianaOjoc)
 
-## Homework4 7 segment display drawing
+## Homework3 7 segment display drawing
 I used the joystick to control the position of the segment and "draw" on the display. Movement between segments should be natural, that is, it should jump from the current position only to neighbors, but without passing through "walls". The components used in this homework include:  1  7-segment  display,  1  joystick,  resistors  and  wires. 
