@@ -46,14 +46,7 @@ void setup() {
     pinMode(segmentPins[i], OUTPUT);
     digitalWrite(segmentPins[i], LOW);
   }
-  /*
-  // Starea corectă a segmentelor
-  segmentState[7] = HIGH; // DP este aprins
-  for (int i = 0; i < 8; i++) {
-    segmentState[i] = LOW; // Celelalte segmente sunt stinse
-  }
-
-  Serial.begin(9600);*/
+ 
 for (int i = 0; i < 8; i++) {
     pinMode(segmentPins[i], OUTPUT);
     digitalWrite(segmentPins[i], LOW);
