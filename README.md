@@ -30,7 +30,7 @@ I used the joystick to control the position of the segment and "draw" on the dis
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/adp_y_hMdd4)](https://www.youtube.com/watch?v=adp_y_hMdd4&ab_channel=Diana-CristianaOjoc)
 
-## Homework5 - Stopwatch timer
+## Homework4 - Stopwatch timer
 I tried to implement a stopwatch timer that counts in tenths of a second and has a save lap functionality, similar to most basic stopwatch functions on most phones. The components used in this homework include: 1 7-segment display, 3 buttons, resistors, and wires.
 
 
