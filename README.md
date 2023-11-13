@@ -9,6 +9,7 @@ This assignment focuses on controlling each channel (Red, Green, and Blue) of an
 
 ### Picture of the setup
 <img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/WhatsApp%20Image%202023-10-21%20at%2021.38.51.jpeg?raw=true" alt="A photo of my setup" width="500" height="300">
+
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/S05PshwinNo)](https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DS05PshwinNo%26ab_channel%3DDiana-CristianaOjoc%26cbrd%3D1&gl=RO&m=0&pc=yt&cm=4&hl=en&src=1)
 
@@ -20,6 +21,7 @@ If the elevator is already at the desired floor, pressing the button for that fl
 
 ### Picture of the setup
 <img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Elevator%20simulator%20wannabe.jpeg?raw=true" alt="A photo of my setup" width="500" height="300">
+
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/JMy4mJVvdsM?t=5)](https://www.youtube.com/watch?v=JMy4mJVvdsM&ab_channel=Diana-CristianaOjoc)
 
@@ -28,6 +30,7 @@ I used the joystick to control the position of the segment and "draw" on the dis
 
 ### Picture of the setup
 <img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/7segment%20display.jpg?raw=true" alt="A photo of my setup" width="500" height="300">
+
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/adp_y_hMdd4)](https://www.youtube.com/watch?v=adp_y_hMdd4&ab_channel=Diana-CristianaOjoc)
 
