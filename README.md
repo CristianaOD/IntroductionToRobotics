@@ -19,6 +19,7 @@ If the elevator is already at the desired floor, pressing the button for that fl
 
 ### Picture of the setup
 ![A photo of my setup](https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Elevator%20simulator%20wannabe.jpeg?raw=true)
+<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Elevator%20simulator%20wannabe.jpeg?raw=true" alt="Text alternativ" width="500" height="300">
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/JMy4mJVvdsM?t=5)](https://www.youtube.com/watch?v=JMy4mJVvdsM&ab_channel=Diana-CristianaOjoc)
 
