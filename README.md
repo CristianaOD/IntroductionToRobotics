@@ -39,8 +39,8 @@ I tried to implement a stopwatch timer that counts in tenths of a second and has
 viewing mode); Button 3: Save lap (if in counting mode), cycle through last saved laps (up to 4 laps).
 
 ### Picture of the setup
-<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/7segment%20display.jpg?raw=true" alt="A photo of my setup" width="500" height="350">
+<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Stopwatch_timer.jpg?raw=true" alt="A photo of my setup" width="500" height="350">
 
 ### Video
-[![A link to a video showcasing functionality ](https://youtu.be/lUo8LVyE1As?t=1)](https://www.youtube.com/watch?v=lUo8LVyE1As&ab_channel=Diana-CristianaOjoc)
+[![A link to a video showcasing functionality ](https://youtu.be/9RFk5uDwGFI)](https://www.youtube.com/watch?v=9RFk5uDwGFI&ab_channel=Diana-CristianaOjoc)
 
