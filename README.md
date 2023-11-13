@@ -20,7 +20,7 @@ Implement 3 buttons that represent the call buttons from the 3 floors. When pres
 If the elevator is already at the desired floor, pressing the button for that floor should have no effect. Otherwise, after a button press, the elevator should "wait for the doors to close" and then "move" to the corresponding floor.
 
 ### Picture of the setup
-<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Elevator%20simulator%20wannabe.jpeg?raw=true" alt="A photo of my setup" width="500" height="300">
+<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Elevator%20simulator%20wannabe.jpeg?raw=true" alt="A photo of my setup" width="500" height="350">
 
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/JMy4mJVvdsM?t=5)](https://www.youtube.com/watch?v=JMy4mJVvdsM&ab_channel=Diana-CristianaOjoc)
@@ -29,7 +29,7 @@ If the elevator is already at the desired floor, pressing the button for that fl
 I used the joystick to control the position of the segment and "draw" on the display. Movement between segments should be natural, that is, it should jump from the current position only to neighbors, but without passing through "walls". The components used in this homework include:  1  7-segment  display,  1  joystick,  resistors  and  wires. 
 
 ### Picture of the setup
-<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/7segment%20display.jpg?raw=true" alt="A photo of my setup" width="500" height="300">
+<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/7segment%20display.jpg?raw=true" alt="A photo of my setup" width="500" height="350">
 
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/adp_y_hMdd4)](https://www.youtube.com/watch?v=adp_y_hMdd4&ab_channel=Diana-CristianaOjoc)
