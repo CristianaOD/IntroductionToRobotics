@@ -38,4 +38,9 @@ I used the joystick to control the position of the segment and "draw" on the dis
 I tried to implement a stopwatch timer that counts in tenths of a second and has a save lap functionality, similar to most basic stopwatch functions on most phones. The components used in this homework include: 1 7-segment display, 3 buttons, resistors, and wires. The starting value of the 4 digit 7 segment display should be ”000.0”. The buttons should have the following functionalities: Button 1: Start / pause; Button 2: Reset (if in pause mode). Reset saved laps (if in lap
 viewing mode); Button 3: Save lap (if in counting mode), cycle through last saved laps (up to 4 laps).
 
+### Picture of the setup
+<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/7segment%20display.jpg?raw=true" alt="A photo of my setup" width="500" height="350">
+
+### Video
+[![A link to a video showcasing functionality ](https://youtu.be/lUo8LVyE1As?t=1)](https://www.youtube.com/watch?v=lUo8LVyE1As&ab_channel=Diana-CristianaOjoc)
 
