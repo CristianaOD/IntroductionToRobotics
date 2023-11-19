@@ -44,3 +44,10 @@ viewing mode); Button 3: Save lap (if in counting mode), cycle through last save
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/9RFk5uDwGFI)](https://www.youtube.com/watch?v=9RFk5uDwGFI&ab_channel=Diana-CristianaOjoc)
 
+## Homework5 - Pseudo-smart environment monitor and logger
+I tried to develop a  ”Smart Environment Monitor and Logger” using Arduino.  This sys-tem will utilize various sensors to gather environmental data, log this data intoEEPROM, and provide both visual feedback via an RGB LED and user interac-tion through a Serial Menu.  The project focuses on integrating sensor readings,memory management, Serial Communication and the general objective of build-ing a menu.  The components used in this homework include: Arduino Uno Board, Ultrasonic Sensor (HC-SR04), LDR (Light-Dependent Resistor) aka Photocell aka Photoresistor aka LightSensor, RGB LED, Resistors as needed, Breadboard and connecting wires. 
+### Picture of the setup
+<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Stopwatch_timer.jpg?raw=true" alt="A photo of my setup" width="500" height="350">
+
+### Video
+[![A link to a video showcasing functionality ](https://youtu.be/9RFk5uDwGFI)](https://www.youtube.com/watch?v=9RFk5uDwGFI&ab_channel=Diana-CristianaOjoc)
