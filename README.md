@@ -53,6 +53,19 @@ viewing mode); Button 3: Save lap (if in counting mode), cycle through last save
 I tried to develop a  ”Smart Environment Monitor and Logger” using Arduino.  This sys-tem will utilize various sensors to gather environmental data, log this data intoEEPROM, and provide both visual feedback via an RGB LED and user interac-tion through a Serial Menu.  The project focuses on integrating sensor readings,memory management, Serial Communication and the general objective of build-ing a menu.  
 
 The components used in this homework include: Arduino Uno Board, Ultrasonic Sensor (HC-SR04), LDR (Light-Dependent Resistor) aka Photocell aka Photoresistor aka LightSensor, RGB LED, Resistors as needed, Breadboard and connecting wires. 
+
+**Menu Structure**
+**1. Sensor Settings**// Go to submenu
+**1.1 Sensors Sampling Interval.** 
+
+Here you should be prompted fora value between 1 and 10 seconds.  Use this value as a sampling ratefor the sensors.  You can read a separate value for each or have thesame for both.
+**1.2 Ultrasonic Alert Threshold.**
+
+Here you should be promptedfor a threshold value for the ultrasonic sensor. When sensor value exceeds the threshold value,  an alert should begiven.  This can be in the form of a message.  If the LED is set toAutomatic Mode (see section 4.2), it should also turn red if any ofthe sensors are outside the value.
+**1.3 LDR Alert Threshold.**
+
+Here you should be prompted for athreshold  value  for  the  LDR  sensor.   You  can  decide  if  that  is  themin or max value (for example, it could signal that night is coming).When sensor value exceeds the threshold value,  an alert should begiven.  This can be in the form of a message.  If the LED is set toAutomatic Mode (see section 4.2), it should also turn red if any ofthe sensors are outside the value.
+**1.4 Back**// Return to main menu
 ### Picture of the setup
 <img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Pseudo-smart%20environment%20monitor%20and%20logger.jpeg?raw=true" alt="A photo of my setup" width="500" height="350">
 
