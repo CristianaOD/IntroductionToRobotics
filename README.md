@@ -77,4 +77,4 @@ Here you should be prompted for athreshold  value  for  the  LDR  sensor.   You 
 <img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Pseudo-smart%20environment%20monitor%20and%20logger.jpeg?raw=true" alt="A photo of my setup" width="500" height="350">
 
 ### Video
-[![A link to a video showcasing functionality ](https://youtu.be/9RFk5uDwGFI)](https://www.youtube.com/watch?v=9RFk5uDwGFI&ab_channel=Diana-CristianaOjoc)
+[![A link to a video showcasing functionality ](https://youtu.be/7pNTpUT4WCs)](https://www.youtube.com/watch?v=7pNTpUT4WCs&ab_channel=Diana-CristianaOjoc)
