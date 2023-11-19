@@ -65,13 +65,48 @@ Here you should be prompted fora value between 1 and 10 seconds.  Use this value
 
   **1.2 Ultrasonic Alert Threshold.**
 
-Here you should be promptedfor a threshold value for the ultrasonic sensor. When sensor value exceeds the threshold value,  an alert should begiven.  This can be in the form of a message.  If the LED is set toAutomatic Mode (see section 4.2), it should also turn red if any ofthe sensors are outside the value.4
+Here you should be promptedfor a threshold value for the ultrasonic sensor. When sensor value exceeds the threshold value,  an alert should begiven.  This can be in the form of a message.  If the LED is set toAutomatic Mode (see section 4.2), it should also turn red if any ofthe sensors are outside the value.
 
   **1.3 LDR Alert Threshold.**
 
-Here you should be prompted for athreshold  value  for  the  LDR  sensor.   You  can  decide  if  that  is  themin or max value (for example, it could signal that night is coming).When sensor value exceeds the threshold value,  an alert should begiven.  This can be in the form of a message.  If the LED is set toAutomatic Mode (see section 4.2), it should also turn red if any ofthe sensors are outside the value.
+Here you should be prompted for athreshold  value  for  the  LDR  sensor. When sensor value exceeds the threshold value,  an alert should begiven.  This can be in the form of a message.  If the LED is set toAutomatic Mode (see section 4.2), it should also turn red if any ofthe sensors are outside the value.
 
-  **1.4 Back**// Return to main menu
+  **1.4 Back** // Return to main menu
+
+**2. Reset Logger Data.**
+Should  print  a  message,  promting  if  you  toconfirm to delete all  data. You can reset both sensor data at the sametime.
+
+**2.1 Yes.**
+
+**2.2 No.**
+
+**3. System Status** // Check current status and health
+
+**3.1 Current Sensor Readings.** 
+
+Continuously print sensor readingsat the set sampling rate, from all sensors.
+
+**3.2 Current Sensor Settings.**
+
+Displays  the  sampling  rate  andthreshold value for all sensors.
+
+**3.3 Display Logged Data.**
+
+Displays last 10 sensor readings for allsensors. 
+
+**3.4 Back.** //Return to Main menu.
+  
+**4. RGB LED Control** // Go to submenu
+
+**4.1 Manual Color Control.**
+
+Set the RGB colors manually.
+
+**4.2 LED: Toggle Automatic ON/OFF.** 
+
+If  automatic  mode  isON, then the led color should be GREEN when all sensors value donot exceed threshold values (aka no alert) and RED when there is analert (aka ANY sensor value exceeds the threshold). When automaticmode is OFF, then the LED should use the last saved RGB values.
+
+**4.3 Back** // Return to main menu
 
 ### Picture of the setup
 <img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Pseudo-smart%20environment%20monitor%20and%20logger.jpeg?raw=true" alt="A photo of my setup" width="500" height="350">
