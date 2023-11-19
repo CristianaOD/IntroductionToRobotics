@@ -14,8 +14,11 @@ This assignment focuses on controlling each channel (Red, Green, and Blue) of an
 [![A link to a video showcasing functionality ](https://youtu.be/S05PshwinNo)](https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DS05PshwinNo%26ab_channel%3DDiana-CristianaOjoc%26cbrd%3D1&gl=RO&m=0&pc=yt&cm=4&hl=en&src=1)
 
 ## Homework2 - Elevator simulator wannabe
-This  assignment  involves  simulating  a  3-floor  elevator  control  system  usingLEDs, buttons, and a buzzer with Arduino. Through this assignment, I gained experience using button state switching, implementing unlocking techniques, and coordinating multiple components to represent real-world scenarios. The components used in this homework include LEDs  (4:  3  for  the  floors  and  1  for  the  elevator’s  operationalstate), Buttons (At least 3 for floor calls), Buzzer (1). 
+This  assignment  involves  simulating  a  3-floor  elevator  control  system  usingLEDs, buttons, and a buzzer with Arduino. Through this assignment, I gained experience using button state switching, implementing unlocking techniques, and coordinating multiple components to represent real-world scenarios. 
+
+The components used in this homework include LEDs  (4:  3  for  the  floors  and  1  for  the  elevator’s  operationalstate), Buttons (At least 3 for floor calls), Buzzer (1). 
 Each of the 3 LEDs should represent one of the 3 floors. The LED corresponding to the current floor should light up. Additionally, another LED should represent the elevator's operational state. It should blink when the elevator is moving and remain static when stationary. 
+
 Implement 3 buttons that represent the call buttons from the 3 floors. When pressed, the elevator should simulate movement towards the floor after a short interval (2-3 seconds).
 If the elevator is already at the desired floor, pressing the button for that floor should have no effect. Otherwise, after a button press, the elevator should "wait for the doors to close" and then "move" to the corresponding floor.
 
@@ -35,7 +38,9 @@ I used the joystick to control the position of the segment and "draw" on the dis
 [![A link to a video showcasing functionality ](https://youtu.be/adp_y_hMdd4)](https://www.youtube.com/watch?v=adp_y_hMdd4&ab_channel=Diana-CristianaOjoc)
 
 ## Homework4 - Stopwatch timer
-I tried to implement a stopwatch timer that counts in tenths of a second and has a save lap functionality, similar to most basic stopwatch functions on most phones. The components used in this homework include: 1 7-segment display, 3 buttons, resistors, and wires. The starting value of the 4 digit 7 segment display should be ”000.0”. The buttons should have the following functionalities: Button 1: Start / pause; Button 2: Reset (if in pause mode). Reset saved laps (if in lap
+I tried to implement a stopwatch timer that counts in tenths of a second and has a save lap functionality, similar to most basic stopwatch functions on most phones. The components used in this homework include: 1 7-segment display, 3 buttons, resistors, and wires. The starting value of the 4 digit 7 segment display should be ”000.0”. 
+
+The buttons should have the following functionalities: Button 1: Start / pause; Button 2: Reset (if in pause mode). Reset saved laps (if in lap
 viewing mode); Button 3: Save lap (if in counting mode), cycle through last saved laps (up to 4 laps).
 
 ### Picture of the setup
@@ -45,7 +50,9 @@ viewing mode); Button 3: Save lap (if in counting mode), cycle through last save
 [![A link to a video showcasing functionality ](https://youtu.be/9RFk5uDwGFI)](https://www.youtube.com/watch?v=9RFk5uDwGFI&ab_channel=Diana-CristianaOjoc)
 
 ## Homework5 - Pseudo-smart environment monitor and logger
-I tried to develop a  ”Smart Environment Monitor and Logger” using Arduino.  This sys-tem will utilize various sensors to gather environmental data, log this data intoEEPROM, and provide both visual feedback via an RGB LED and user interac-tion through a Serial Menu.  The project focuses on integrating sensor readings,memory management, Serial Communication and the general objective of build-ing a menu.  The components used in this homework include: Arduino Uno Board, Ultrasonic Sensor (HC-SR04), LDR (Light-Dependent Resistor) aka Photocell aka Photoresistor aka LightSensor, RGB LED, Resistors as needed, Breadboard and connecting wires. 
+I tried to develop a  ”Smart Environment Monitor and Logger” using Arduino.  This sys-tem will utilize various sensors to gather environmental data, log this data intoEEPROM, and provide both visual feedback via an RGB LED and user interac-tion through a Serial Menu.  The project focuses on integrating sensor readings,memory management, Serial Communication and the general objective of build-ing a menu.  
+
+The components used in this homework include: Arduino Uno Board, Ultrasonic Sensor (HC-SR04), LDR (Light-Dependent Resistor) aka Photocell aka Photoresistor aka LightSensor, RGB LED, Resistors as needed, Breadboard and connecting wires. 
 ### Picture of the setup
 <img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Pseudo-smart%20environment%20monitor%20and%20logger.jpeg?raw=true" alt="A photo of my setup" width="500" height="350">
 
