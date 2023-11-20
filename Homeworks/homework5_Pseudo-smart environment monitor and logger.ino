@@ -465,7 +465,7 @@ void processRGBLEDControlOption(int subOption) {
 //4.1
 void setManualColorControl() {
   Serial.println("Manual Color Control:");
-  Serial.println("Enter RGB values separated by commas (e.g., 255.0.0 for red):");
+  Serial.println("Enter RGB values (e.g., 255.0.0 for red):");
 
   while (Serial.available() == 0) {
   }
