@@ -359,7 +359,7 @@ void setCurrentSensorReadingsMenu() {
     int ultrasonicValue = readUltrasonicSensor();
     int ldrValue = analogRead(LDRPin);
 
-    // Salvati citirile in buffer
+    //salvez citirile in buffer
     ultrasonicReadings[currentIndex] = ultrasonicValue;
     ldrReadings[currentIndex] = ldrValue;
     currentIndex = (currentIndex + 1) % bufferSize;
