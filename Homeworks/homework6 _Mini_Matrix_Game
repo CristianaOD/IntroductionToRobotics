@@ -1,1 +1,228 @@
 
+#include "LedControl.h"
+
+const int dinPin = 12;
+const int clockPin = 11;
+const int loadPin = 10;
+
+const int xPin = A0;
+const int yPin = A1;
+const int buttonPin = 13;
+
+const int buttonDefaultState = LOW;  // starea implicita a butonului
+
+LedControl lc = LedControl(dinPin, clockPin, loadPin, 1);
+
+const int matrixSize = 8;
+bool matrixChanged = true;
+byte matrix[matrixSize][matrixSize];
+
+int playerX, playerY;
+int bombX, bombY;
+
+int wallPercentage = 60; // densitatea peretilor
+int playerBlinkInterval = 500; // interval de clipire jucator
+int bombBlinkInterval = 200; // interval de clipire bomba
+
+unsigned long lastPlayerBlink = 0;
+unsigned long lastBombBlink = 0;
+unsigned long lastMoved = 0;
+
+bool bombPlaced = false;
+unsigned long bombTimer;
+const int bombDuration = 3000;
+
+byte xPos = 0;
+byte yPos = 0;
+byte xLastPos = 0;
+byte yLastPos = 0;
+const int minThreshold = 100;
+const int maxThreshold = 500;
+
+const byte moveInterval = 200;
+
+void setup() {
+  lc.shutdown(0, false);
+  lc.setIntensity(0, 2);
+  lc.clearDisplay(0);
+  initializeGame();
+
+  // Setează pinul butonului la starea implicită
+  pinMode(buttonPin, INPUT);
+
+  Serial.begin(9600);
+  Serial.println("Initialized");
+}
+
+
+void loop() {
+  unsigned long currentMillis = millis();
+  if (currentMillis - lastMoved >= moveInterval) {
+    updatePositions();
+    lastMoved = currentMillis;
+  }
+  updateGame();
+  Serial.print("Button State: ");
+  Serial.println(digitalRead(buttonPin));
+  if (digitalRead(buttonPin) == HIGH) {
+    placeBomb();
+  }
+  
+  updateMatrix();
+}
+
+
+void initializeGame() {
+  // pereti, jucator, bomba
+  for (int i = 0; i < matrixSize; i++) {
+    for (int j = 0; j < matrixSize; j++) {
+      matrix[i][j] = random(100) < wallPercentage ? 1 : 0;
+    }
+  }
+
+  playerX = random(matrixSize);
+  playerY = random(matrixSize);
+  matrix[playerX][playerY] = 2; // jucator
+
+  do {
+    bombX = random(matrixSize);
+    bombY = random(matrixSize);
+  } while (matrix[bombX][bombY] != 0);
+
+  matrix[bombX][bombY] = 3; // bomba
+  
+}
+
+void updateGame() {
+  int xValue = analogRead(xPin);
+  int yValue = analogRead(yPin);
+
+  int prevPlayerX = playerX;
+  int prevPlayerY = playerY;
+
+  // controlul joystick-ului
+  if (xValue < 100 && playerX > 0) {
+    playerX--;
+  } else if (xValue > 900 && playerX < matrixSize - 1) {
+    playerX++;
+  }
+
+  if (yValue < 100 && playerY > 0) {
+    playerY--;
+  } else if (yValue > 900 && playerY < matrixSize - 1) {
+    playerY++;
+  }
+
+  // jucator = 2 pentru pozitia noua in matrice
+  if (playerX != prevPlayerX || playerY != prevPlayerY) {
+    matrix[prevPlayerX][prevPlayerY] = 0;
+    matrix[playerX][playerY] = 2;
+  }
+
+  if (bombPlaced) {
+    matrix[bombX][bombY] = 3; 
+  }
+
+  // clipire bomba
+  if (millis() - lastBombBlink > bombBlinkInterval) {
+    matrix[bombX][bombY] = !matrix[bombX][bombY];
+    lastBombBlink = millis();
+  }
+
+  // clipire jucator
+  if (millis() - lastPlayerBlink > playerBlinkInterval) {
+    matrix[playerX][playerY] = !matrix[playerX][playerY];
+    lastPlayerBlink = millis();
+  }
+}
+
+void placeBomb() {
+ 
+  int buttonState = digitalRead(buttonPin);
+
+  if (matrixChanged && buttonState == HIGH && !bombPlaced) {
+    // plasez bomba doar daca butonul joystick-ului este apasat si nu exista deja o bomba plasata
+    bombX = playerX;
+    bombY = playerY;
+    bombPlaced = true;
+    bombTimer = millis(); 
+    matrixChanged = true;
+  }
+
+  // verific daca bomba a fost plasata si a trecut destul timp
+  if (bombPlaced && millis() - bombTimer > bombDuration) {
+    clearBomb(); // elimin bomba si efectele asociate
+  }
+  
+}
+
+void clearBomb() {
+  // elimin coloana si randul corespunzatoare pozitiei bombei
+  for (int i = 0; i < matrixSize; i++) {
+    matrix[bombX][i] = 0;
+    matrix[i][bombY] = 0;
+  }
+
+  // resetez pozitia bombei
+  bombPlaced = false;
+}
+
+void updateMatrix() {
+  for (int row = 0; row < matrixSize; row++) {
+    for (int col = 0; col < matrixSize; col++) {
+      lc.setLed(0, row, col, matrix[row][col]); 
+    }
+  }
+}
+
+void updatePositions() {
+  int xValue = analogRead(xPin);
+  int yValue = analogRead(yPin);
+
+  int prevPlayerX = playerX;
+  int prevPlayerY = playerY;
+
+  if (xValue < 100 && playerX > 0) {
+    if (matrix[playerX - 1][playerY] != 1) {
+      playerX--;
+    }
+  } else if (xValue > 900 && playerX < matrixSize - 1) {
+    if (matrix[playerX + 1][playerY] != 1) {
+      playerX++;
+    }
+  }
+
+  if (yValue < 100 && playerY > 0) {
+    if (matrix[playerX][playerY - 1] != 1) {
+      playerY--;
+    }
+  } else if (yValue > 900 && playerY < matrixSize - 1) {
+    if (matrix[playerX][playerY + 1] != 1) {
+      playerY++;
+    }
+  }
+
+  // Place bomb when joystick button is pressed
+  if (digitalRead(2) == LOW) {
+    if (!bombPlaced) {
+      matrix[playerX][playerY] = 3; // Bomb
+      bombPlaced = true;
+    }
+  }
+}
+
+
+void movePlayer() {
+  byte newPosX = constrain(playerX + xPos - xLastPos, 0, matrixSize - 1);
+  byte newPosY = constrain(playerY + yPos - yLastPos, 0, matrixSize - 1);
+
+  // verific daca noul loc este liber (nu e perete sau bomba)
+  if (matrix[newPosX][newPosY] != 1 && matrix[newPosX][newPosY] != 3) {
+    matrixChanged = true;
+   // matrix[playerX][playerY] = 0;
+    playerX = newPosX;
+    playerY = newPosY;
+    matrix[playerX][playerY] = 2;
+  }
+}
+
