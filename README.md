@@ -125,5 +125,5 @@ The components used in this homework include: Arduino Uno Board, Joystick, 8x8 L
 <img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Mini%20Matrix%20Game.jpeg?raw=true" alt="A photo of my setup" width="500" height="350">
 
 ### Video
-[![A link to a video showcasing functionality ](https://youtu.be/JMy4mJVvdsM?t=5)](https://www.youtube.com/watch?v=JMy4mJVvdsM&ab_channel=Diana-CristianaOjoc)
+[![A link to a video showcasing functionality ](https://youtu.be/w9cDfYQvrYI)](https://www.youtube.com/watch?v=w9cDfYQvrYI&ab_channel=Diana-CristianaOjoc)
 
