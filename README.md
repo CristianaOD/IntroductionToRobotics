@@ -113,3 +113,17 @@ If  automatic  mode  is ON, then the led color should be GREEN when all sensors 
 
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/7pNTpUT4WCs)](https://www.youtube.com/watch?v=7pNTpUT4WCs&ab_channel=Diana-CristianaOjoc)
+
+
+## Homework6 - Mini Matrix Game
+I tried to develop a small game on the 8x8 matrix. The game must have at least 3 types of elements: player (blinks slowly), bombs/bullets (blinks fast), wall (doesn't blink). The basic idea is that I generate walls on the map (50% - 75% of the map) and then you move with the player and destroy them. The player and the bombs need to blinkat  different  rates.   The  player  should  blink  slowly  and  the  bomb/bulletshould blink fast.  The wall should not blink at all.
+
+The components used in this homework include: Arduino Uno Board, Joystick, 8x8 LED Matrix, MAX7219, Resistors and capacitors, Breadboard and connecting wires.
+
+
+### Picture of the setup
+<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Elevator%20simulator%20wannabe.jpeg?raw=true" alt="A photo of my setup" width="500" height="350">
+
+### Video
+[![A link to a video showcasing functionality ](https://youtu.be/JMy4mJVvdsM?t=5)](https://www.youtube.com/watch?v=JMy4mJVvdsM&ab_channel=Diana-CristianaOjoc)
+
