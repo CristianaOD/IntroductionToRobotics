@@ -182,47 +182,47 @@ void updatePositions() {
   int prevPlayerX = playerX;
   int prevPlayerY = playerY;
 
-  if (xValue < 100 && playerX > 0) {
-    if (matrix[playerX - 1][playerY] != 1) {
-      playerX--;
-    }
-  } else if (xValue > 900 && playerX < matrixSize - 1) {
-    if (matrix[playerX + 1][playerY] != 1) {
-      playerX++;
-    }
-  }
+  movePlayer(xValue, yValue);
 
-  if (yValue < 100 && playerY > 0) {
-    if (matrix[playerX][playerY - 1] != 1) {
-      playerY--;
-    }
-  } else if (yValue > 900 && playerY < matrixSize - 1) {
-    if (matrix[playerX][playerY + 1] != 1) {
-      playerY++;
-    }
-  }
-
-  // Place bomb when joystick button is pressed
+  // amplaseaza bomba cand butonul este apasat
   if (digitalRead(2) == LOW) {
     if (!bombPlaced) {
-      matrix[playerX][playerY] = 3; // Bomb
+      matrix[playerX][playerY] = 3; // bomba
       bombPlaced = true;
     }
   }
 }
 
+void movePlayer(int xValue, int yValue) {
+  byte newPosX = playerX;
+  byte newPosY = playerY;
 
-void movePlayer() {
-  byte newPosX = constrain(playerX + xPos - xLastPos, 0, matrixSize - 1);
-  byte newPosY = constrain(playerY + yPos - yLastPos, 0, matrixSize - 1);
+  if (xValue < 100 && playerX > 0) {
+    if (matrix[playerX - 1][playerY] != 1) {
+      newPosX = playerX - 1;
+    }
+  } else if (xValue > 900 && playerX < matrixSize - 1) {
+    if (matrix[playerX + 1][playerY] != 1) {
+      newPosX = playerX + 1;
+    }
+  }
 
-  // verific daca noul loc este liber (nu e perete sau bomba)
+  if (yValue < 100 && playerY > 0) {
+    if (matrix[playerX][playerY - 1] != 1) {
+      newPosY = playerY - 1;
+    }
+  } else if (yValue > 900 && playerY < matrixSize - 1) {
+    if (matrix[playerX][playerY + 1] != 1) {
+      newPosY = playerY + 1;
+    }
+  }
+
+  // Verifică dacă noul loc este liber (nu este perete sau bomba)
   if (matrix[newPosX][newPosY] != 1 && matrix[newPosX][newPosY] != 3) {
     matrixChanged = true;
-   // matrix[playerX][playerY] = 0;
+    matrix[playerX][playerY] = 0;
     playerX = newPosX;
     playerY = newPosY;
     matrix[playerX][playerY] = 2;
   }
 }
-
