@@ -130,6 +130,9 @@ The components used in this homework include: Arduino Uno Board, Joystick, 8x8 L
 
 ## Homework7 - Matrix Checkpoint
 
+
+The components used in this homework include: Arduino Uno Board, Joystick, 8x8 LED Matrix,LCD Display, MAX7219, Resistors and capacitors, Breadboard and connecting wires.
+
 The following functionality for this checkpoint:
 
 **1.Intro Message** - When  powering  up  the  project,  a  greeting  messageshould be shown for a few moments.
@@ -138,13 +141,16 @@ The following functionality for this checkpoint:
 
 **(a)Start game**, starts the initial level of
 
-**(b)Settings**. ** LCD  brightness  control.**   Save  value  to  EEPROM  and  load  itupon system start,  **Matrix brightness control** .
+**(b)Settings**. **LCD  brightness  control**. Save  value  to  EEPROM  and  load  itupon system start. **Matrix brightness control** .
 
 **(c)About**: include details about the creator of the game.  Atleast game name, author and github link
 
 **3.End Message**
 
 - When the game ends, add a message.
+  
+**4.During gameplay**:
+**Show  relevant  details**,  that  are  dynamic  (change  with  gameplay): time
   
 ### Picture of the setup
 <img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Matrix%20Checkpoint.jpeg?raw=true" alt="A photo of my setup" width="500" height="350">
