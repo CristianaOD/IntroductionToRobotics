@@ -127,3 +127,12 @@ The components used in this homework include: Arduino Uno Board, Joystick, 8x8 L
 ### Video
 [![A link to a video showcasing functionality ](https://youtu.be/w9cDfYQvrYI)](https://www.youtube.com/watch?v=w9cDfYQvrYI&ab_channel=Diana-CristianaOjoc)
 
+
+## Homework7 - Matrix Checkpoint
+
+
+### Picture of the setup
+<img src="https://github.com/CristianaOD/IntroductionToRobotics/blob/main/Homeworks/Matrix%20Checkpoint.jpeg?raw=true" alt="A photo of my setup" width="500" height="350">
+
+### Video
+[![A link to a video showcasing functionality ](https://youtu.be/vldVTkVOfkE)](https://www.youtube.com/watch?v=vldVTkVOfkE&ab_channel=Diana-CristianaOjoc)
