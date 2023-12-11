@@ -131,7 +131,7 @@ The components used in this homework include: Arduino Uno Board, Joystick, 8x8 L
 ## Homework7 - Matrix Checkpoint
 
 
-The components used in this homework include: Arduino Uno Board, Joystick, 8x8 LED Matrix,LCD Display, MAX7219, Resistors and capacitors, Breadboard and connecting wires.
+The components used in this homework include: Arduino Uno Board, Joystick, 8x8 LED Matrix, LCD Display, MAX7219, Resistors and capacitors, Breadboard and connecting wires.
 
 The following functionality for this checkpoint:
 
